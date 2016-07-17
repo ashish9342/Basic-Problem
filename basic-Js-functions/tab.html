@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tabs</title>
+</head>
+<style type="text/css">
+	.container{
+		width: 600px;
+		margin: 0 auto;
+		background: #ccc;
+
+	}
+
+	ul.tab-btn{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	ul.tab-btn li{
+		float: left;
+		margin-right: 30px;
+		height: 50px;
+
+	}
+
+	.clearfix{
+		clear: both;
+	}
+
+	#tab-content2,
+	#tab-content3,
+	#tab-content4,
+	#tab-content5
+
+	{
+		display: none;
+	}
+
+	.tab-btn li.active{
+		pointer-events: none;
+	}
+</style>
+
+<body>
+
+<div class="container">
+	<ul class="tab-btn">
+		<li data-currtab="tab-content1" class="active">tab btn 1</li>
+		<li data-currtab="tab-content2">tab btn 2</li>
+		<li data-currtab="tab-content3">tab btn 3</li>
+		<li data-currtab="tab-content4">tab btn 4</li>
+		<li data-currtab="tab-content5">tab btn 5</li>
+	</ul>
+
+	<div class="tab-content clearfix">
+		<div id="tab-content1" class="tabs">1</div>
+		<div id="tab-content2" class="tabs">2</div>
+		<div id="tab-content3" class="tabs">3</div>
+		<div id="tab-content4" class="tabs">4</div>
+		<div id="tab-content5" class="tabs">5</div>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+	$("ul.tab-btn > li").on("click", function() {
+		//console.log($(this).attr('data-currtab'));
+	    $('.tabs').hide();
+	    $("ul.tab-btn  li ").removeClass("active");
+	    $(this).addClass("active");
+	    $('#'+$(this).attr('data-currtab')).show();
+    	return false;
+	});
+	
+</script>	
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="name" id="num">
+	<button onclick="sub()">button</button>
+	<script type="text/javascript">
+	/*function but(){
+		var k = document.getElementById('num').value;
+		var l = k.split(" ");
+		return l;
+	}
+
+	function sub(){
+		var m= but();
+		for(var i = 0; i<=m.length-1;i++){
+
+			var n = m[i][i].toUpperCase();
+			console.log(n);
+
+			// 	for(var j = 0; j<=m.length-1; j++){
+			// 	console.log(m[i][j]);
+			// }
+		}
+		
+		console.log(m);
+	}
+	*/
+
+	//Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.  
+  
+	function uppercase(str)  
+	{  
+	  var array1 = str.split(' ');  
+	  var newarray1 = [];  
+	      
+	  for(var x = 0; x < array1.length; x++){  
+	      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));  
+	  } 
+	  console.log(newarray1);  
+	  return newarray1.join(' '); 
+	}
+
+	var k =  uppercase("the quick brown fox");
+	console.log(k);  
+	</script>
+</body>
+</html>

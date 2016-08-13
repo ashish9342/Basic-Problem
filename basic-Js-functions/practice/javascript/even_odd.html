@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>enter any value</h1>
+	<input id="numb" class="01" type="number" required/>
+
+	<button type="button" class="01" onclick="myFunction()">Submit</button>
+	<p id="demo"></p>
+
+<script>
+
+	// function myFunction() {
+	//     var x;
+
+	//     // Get the value of the input field with id="numb"
+	//     x = document.getElementById("numb").value;
+
+	//     document.getElementById("demo").innerHTML=x;
+	//     // If x is Not a Number or less than one or greater than 10
+	 
+	//    		if(x%2==0){
+	//    			text="even";
+	//    		}	   		
+	//    		else{
+	//    			text="odd";
+	//    		}
+	   
+	//     document.getElementById("demo").innerHTML = text;
+	// }
+
+
+	function myFunction() {
+	    var x = document.getElementsByClassName("01");
+	    console.log(x[0].value);
+
+	   		if(x[0].value%2==0){
+	   			text="even";
+	   		}	   		
+	   		else{
+	   			text="odd";
+	   		}
+	   
+	   document.getElementById("demo").innerHTML = text;
+	}
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>aliquip</title>
+</head>
+<body>
+	
+	<p id="demo">The rain in SPAIN stays mainly in the plain</p>
+	<input type="text" name="name" id="num">
+	<button onclick="myFunction()">sub</button>
+	<script type="text/javascript">
+		/*var str = "sharepoint 2010 is good. sharepoint 2010 is nice. sharepoint 2010 is better then sharepoint 2010.sharepoint 2010";
+		var x = 0;
+		if(str.indexOf("is",x)){
+			var k = str.indexOf("is");
+			x+= k;
+		}
+		console.log(k);
+		*/
+		/*
+		var k = ["prem","kumaris","is","a","prem","good","boy","is","prem"];
+		var c = 0;
+		for (i = 0; i<=k.length ; i++){
+			if(k[i]=="is"){
+				c+=1;
+			}
+		}
+		console.log(c);
+		*/
+		//var k = myFunction();
+		/*
+		    var str = "The rain in SPAIN stays mainly in the plain"; 
+		    var test = "ain";
+		    var regex = new RegExp( str, "ain" );
+		   //var re = /test/g;
+		    
+		    //var res = str.match(/test/g);
+		    console.log(regex);
+		*/
+		
+		//console.log(k);
+		"use strict";
+		
+		function myFunction() {
+		    var str = "The rain in SPAIN stays mainly in the plain",
+		        test ="ain",
+		        re = new RegExp(test, 'gi'),
+		        res = str.match(re);
+		        console.log(typeof test);
+		    return res;
+		}
+		var k = myFunction();
+		console.log(k.length);
+
+	</script>
+</body>
+</html>

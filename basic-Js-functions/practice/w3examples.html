@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>W3resourse examples</title>
+<style>  
+h1 {  
+color:red;  
+border-bottom: 3px groove silver;  
+padding-bottom: 8px;  
+}  
+</style>  
+</head> 
+<body> 
+<h1>JavaScript function operator example</h1>
+<script>
+	//devider
+	 var var1 = 45;  
+	 var var2 = 78;  
+	 var var3 = 545.10;
+	 var var4 = 178.12;  
+	 var newvar  = var1 % var2;  
+	 var newvar1 = var3 % var4;  
+
+
+	 var newParagraph = document.createElement("h1");
+	 var message_entered="This is new node";  
+	 var newText = document.createTextNode(message_entered);  
+	 newParagraph.appendChild(newText);  
+	 document.body.appendChild(newParagraph);
+	  
+	 // var newParagraph = document.createElement("h1");  
+	 // var newText = document.createTextNode("var1 % var2 = "+ newvar);  
+	 // newParagraph.appendChild(newText);  
+	 // document.body.appendChild(newParagraph);  
+	  
+	 // var newParagraph1 = document.createElement("h1");  
+	 // var newText1 = document.createTextNode("var3 % var4  = "+ newvar1);  
+	 // newParagraph1.appendChild(newText1);  
+	 // document.body.appendChild(newParagraph1); 
+
+	// var fruits =  Array("Orange", "Apple", "Banana", "Chery");  
+	// var newParagraph = document.createElement("h2");   
+	// var newText = document.createTextNode("Fruits List : " + fruits);  
+	// newParagraph.appendChild(newText);  
+	// document.body.appendChild(newParagraph);  
+	// //Delete the array object.  
+	// delete fruits;  
+	// var newParagraph1 = document.createElement("h2");  
+	// var newText1 = document.createTextNode("Display the Fruits after delete the array object - Fruits List : "+ fruits);   
+	// newParagraph1.appendChild(newText1);  
+	// document.body.appendChild(newParagraph1); 
+
+	var p = Array("12","52","568","3221","89689655");
+
+	var newhead = document.createElement("h3");
+
+	var newText = document.createTextNode(p);
+
+	newhead.appendChild(newText);
+
+	document.body.appendChild(newhead);
+	
+	var a = prompt("enter the a value");  
+	var b = prompt("enter the b value");  
+	var x = function(a,b)  
+	{  
+	var c = a*a+2*a*b+b*b;  
+	return c;
+	}; 
+	var d =  x(a,b)
+	alert("The square of "+a+ " and "+b +" is " + d);
+	
+	
+	var k = {name:"Ashish", mobile:"9738476982", address:"Bang"}
+	if("mobile" in k){
+		alert("the mobile number is"+ k.name);
+	}
+	else{
+		alert("bad");
+	}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>enter any value</h1>
+	<input id="numb">
+
+	<button type="button" onclick="myFunction()">Submit</button>
+	<p id="demo"></p>
+
+<script>
+	function myFunction() {
+	    var x;
+
+	    // Get the value of the input field with id="numb"
+	    x = document.getElementById("numb").value;
+
+	    document.getElementById("demo").innerHTML=x;
+	    // If x is Not a Number or less than one or greater than 10
+	   for(i=0; i<=x; i++){
+	   		if(i%15==0){
+	   			text="fizz_buzz";
+	   		}
+	   		else if(i%3==0){
+	   			text="fizz";
+	   		}
+	   		else if(i%5==0){
+	   			text="buzz";
+	   		}
+	   		else if(isNaN(x)){
+	   			text="this is text";
+	   		}
+	   		else{
+	   			text="it is not divisble by 3,5 and 15";
+	   		}
+	   }
+	    document.getElementById("demo").innerHTML = text;
+	}
+</script>
+
+</body>
+</html> 

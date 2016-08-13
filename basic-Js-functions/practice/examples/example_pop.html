@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pop up</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<style type="text/css">
+#popup1{
+	display: none;
+	width: 650px;
+	height: 400px;
+	overflow: auto
+}
+	
+
+</style>
+<body>
+
+	<div>
+		<button class="btn" onclick="app.init()">Button</button>
+	</div>
+	<div id="popup1">
+		 <div style="padding: 10; font-size: 11px; line-height: 150%;">
+            This is body of popup #1. You can put any text or HTML inside the body (as well as title and buttons).
+            This is body of popup #1. You can put any text or HTML inside the body (as well as title and buttons).
+            This is body of popup #1. You can put any text or HTML inside the body (as well as title and buttons).
+            This is body of popup #1. You can put any text or HTML inside the body (as well as title and buttons).
+            This is body of popup #1. You can put any text or HTML inside the body (as well as title and buttons).
+            This is body of popup #1. You can put any text or HTML inside the body (as well as title and buttons).
+            This is body of popup #1. You can put any text or HTML inside the body (as well as title and buttons).
+            This is body of popup #1. You can put any text or HTML inside the body (as well as title and buttons).
+            This is body of popup #1. You can put any text or HTML inside the body (as well as title and buttons).
+            This is body of popup #1. You can put any text or HTML inside the body (as well as title and buttons).
+            This is body of popup #1. You can put any text or HTML inside the body (as well as title and buttons).
+        </div>
+	</div>
+
+	<script type="text/javascript">
+	$(document).ready(function() { 
+
+
+	 });
+
+	var app = {
+			variable:{},
+
+			bindClick:function(){
+				var a =$(this);
+				console.log(a);
+				$('button').unbind().bind("touchend", function(){
+					var b =$(this);
+					console.log(b);
+					$('#popup1').css("display","block");
+				});
+				$('button').trigger("touchend");
+				
+			},
+
+			init:function(){
+				app.bindClick();
+			}
+		}
+
+	</script>
+</body>
+</html>

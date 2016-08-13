@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Find Day which you were born</title>
+</head>
+<body>
+
+    <p>Date (1-31): <input type="text" id="date"></p>
+    <p>Month (1-12): <input type="text" id="month"></p>
+    <p>Year (eg: 1992): <input type="text" id="year"></p>
+      
+
+
+    <input type="submit" name="submit" onclick="getDay()">
+    <script type="text/javascript">
+    
+function getDay(){
+        var date = document.getElementById("date").value;
+        var year = document.getElementById("year").value;
+        var mon = document.getElementById("month").value;
+
+switch(mon){
+    alert(mon);
+    case 1: month1 = "January";
+            break;
+    case 2: month1 = "February";
+            break;
+    case 3: month1 = "March";
+            break;
+    case 4: month1 = "April";
+            break; 
+    case 5: month1 = "May";
+            break;
+    case 6: month1 = "June";
+            break; 
+    case 7: month1 = "July";
+            break;
+    case 8: month1 = "August";
+            break; 
+    case 9: month1 = "September";
+            break;
+    case 10: month1 = "October";
+            break;
+    case 11: month1 = "November";
+            break; 
+    case 12: month1 = "December";
+            break;                          
+}
+
+
+//January 3, 1978"
+// month date, year
+
+//var dob= month +" " + date + "," + year;
+
+        var week=["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"];
+        console.log(date); 
+        console.log(year); 
+        console.log(month1); 
+
+
+        console.log('--------------------');
+
+        
+            var d = new Date(month + " " + date + "," + year);
+            var day = d.getDay();
+            console.log(day); 
+            console.log(week[day]);    
+           
+        console.log('--------------------');
+ }       
+    	</script>
+</body>
+</html>

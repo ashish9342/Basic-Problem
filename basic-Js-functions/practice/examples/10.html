@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>remaing days</title>
+</head>
+<body>
+	
+	<label>1st number</label>
+	<input type="text" name="name" id="first"><br><br>
+	<label>2nd number</label>
+	<input type="text" name="name" id="second"><br><br>
+	<button onclick="Mul()">Multiply</button>	<button onclick="divide()">Divide</button>
+	<p id="demo"></p>
+	<script type="text/javascript">
+	function Mul(){
+		var k = document.getElementById("first").value;
+		var l = document.getElementById("second").value;
+		document.getElementById("demo").innerHTML = "the result is :"+ k * l;
+	}
+	function divide(){
+		var k = document.getElementById("first").value;
+		var l = document.getElementById("second").value;
+		document.getElementById("demo").innerHTML = "the result is :"+ k / l;
+	}
+	</script>
+</body>
+</html>

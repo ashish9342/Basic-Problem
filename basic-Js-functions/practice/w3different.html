@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>different examples</title>
+	<style type="text/css">
+
+	.head{
+		
+		background-color: #abcdaf;
+		width: 500px;
+		margin-left: 500px;
+	}
+	button{
+		margin-left: 200px;
+	}
+	.num{
+		margin-left: 200px;
+	}
+	h3{
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<!-- <div class="head">
+		<h3>Form examples</h3>
+
+		<form >
+			<label style="margin-left: 96px;">Enter a number</label>
+			<input type="text" name="name" id="num">
+			<br><br>
+			<button onclick="submition()">Submit</button>
+		</form>
+
+	</div> -->
+	<script>
+	// function submition () {
+	// 	var k = document.getElementById("num").value;
+
+		
+	// 	if(typeof Number(k)){
+	// 		var val = document.getElementById("num").value;
+	// 		alert(val*val*val);
+	// 	}
+		
+	// }
+// var x = 12, y = 25;  
+  
+// // This function is defined in the global scope  
+// function add(){  
+//   return (x + y);  
+// }  
+  
+// add();
+// console.log(add());
+
+
+function adding_numbers(numbers) {
+   var result = 0, i;
+   
+  // iterate through arguments
+   for (i = 0; i < arguments.length; i++) {
+      result += arguments[i];
+     var p= console.log(arguments[i]);
+	  
+   }
+   return result;
+}
+console.log(adding_numbers(-561,2,3,-4));
+ 
+	</script>
+</body>
+</html>

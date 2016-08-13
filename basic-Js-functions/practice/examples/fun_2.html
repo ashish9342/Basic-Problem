@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>remaing days</title>
+</head>
+<body>
+	<label>1st number</label>
+	<input type="text" name="name" id="first"><br><br>
+	<button onclick="sub()">palindrom</button>
+	<p id="demo"></p>
+	<p id="demo1"></p>
+	<script type="text/javascript">
+		
+		function pal(){
+			
+			var k = document.getElementById("first").value;
+			var p = "";
+			// alert(k);	
+			for(var i = k.length-1; i>=0; i--){
+				p+=k[i];
+			}
+			return p;
+		}
+
+		function sub(){
+			var v = pal();
+			var k = document.getElementById("first").value;
+			if(v==k){
+				document.getElementById("demo").innerHTML = "the given string is palindrom";
+			}
+			else{
+				document.getElementById("demo1").innerHTML = "this not a palindrom";
+			}
+		}
+		
+		// console.log(v);
+		// if(v==k){
+		// 	alert("you enter string is palindrom");
+		// }
+		// else{
+		// 	alert("you are enter string is not a palindrom");
+		// }
+	</script>
+</body>
+</html>

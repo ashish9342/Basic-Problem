@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>remaing days</title>
+</head>
+<body>
+	
+	<label>1st number</label>
+	<input type="text" name="name" id="first"><br><br>
+	<!-- <label>2nd number</label>
+	<input type="text" name="name" id="second"><br><br> -->
+	<button onclick="ftoc()">F to C</button>	<button onclick="ctof()">C to F</button>
+	<p id="demo"></p>
+	<script type="text/javascript">
+	function ftoc(){
+		var k = document.getElementById("first").value;
+		// var l = document.getElementById("second").value;
+		c = (k-32)*5/9;
+		document.getElementById("demo").innerHTML = k+"'\xB0F"+ c +"'\xB0C" ;
+	}
+	function ctof(){ 
+		var k = document.getElementById("first").value;
+		// var l = document.getElementById("second").value;
+		f = (9 * k)/5 + 32;
+		document.getElementById("demo").innerHTML = k+"'\xB0F is '"+ f + "'\xB0C";
+	}
+	</script>
+</body>
+</html>

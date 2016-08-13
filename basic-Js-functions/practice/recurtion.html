@@ -1,0 +1,35 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="utf-8">  
+<title>JavaScript: Recursive function.</title>  
+<script type="text/javascript">  
+function factorial(n)  
+{  
+if ((n==0) || (n==1))  
+return 1;  
+else   
+facn = (n * factorial(n-1))  
+return facn;  
+}  
+</script>  
+</head>  
+<body>  
+<h1 style="color: red">JavaScript Recursive function example</h1>  
+<hr/>  
+<script type="text/javascript">  
+function factcal()  
+{  
+n=document.form1.text1.value;  
+result = factorial(n);  
+alert(" Factorial of "+n+" = "+result);  
+}  
+</script>  
+<form name="form1" action="#">  
+Input a number :  
+<input type="text" name="text1" size="5" />  
+<br />  
+<input type="button" value="Result" onclick="factcal()" />  
+</form>  
+</body>  
+</html>

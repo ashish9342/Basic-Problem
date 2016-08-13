@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<h1>temperture convertion</h1>
+		
+		<label>From</label>
+		<select>
+		  <option value="celsius" class="cel1">celsius</option>
+		  <option value="fahrenheit" class="foren1">fahrenheit</option>
+		</select>
+
+
+		<label>Input value</label>
+		<Input type="text" id="num">
+		<br><br>
+
+
+		<label>to</label>
+		<select>
+		  <option value="celsius" class="cel2">celsius</option>
+		  <option value="fahrenheit" class="foren2">fahrenheit</option>
+		</select>
+
+
+		<label>converted value</label>
+		<input type="text" id="num1"><br>
+		<button onclick="but()" style="margin-left:100px; margin-top:30px; ">Convert</button>
+
+
+		<script type="text/javascript">
+		function but(){
+			w = prompt("enter a number\n 1.f to c \n 2. c to f");
+			if(w==1){
+				var k = document.getElementById("num").value * 9/5 + 32;
+				document.getElementById("num1").value = k;
+				alert("the f value is :" + k );
+
+	 		}
+	 	else if(w==2){
+				var k = (document.getElementById("num").value -32) * 5/9;
+				document.getElementById("num1").value = k;
+				alert("the c value is :" + k);
+
+			}
+			else{
+				alert("Please enter 1 or 2");
+				but();
+
+			}
+		}
+	 	
+		
+			
+		
+		</script>
+</body>
+</html>

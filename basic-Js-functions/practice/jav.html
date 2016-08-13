@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<script>
+  /*var landscape = function() {
+  var result = "";
+  var flat = function(size) {
+    for (var count = 0; count < size; count++)
+      result += "_";
+   console.log(result);
+  };
+ 
+  var mountain = function(size) {
+    result += "/";
+    for (var count = 0; count < size; count++)
+      result += "'";
+    result += "\\";
+   console.log(result);
+  };
+console.log(result);
+  flat(3);
+  mountain(4);
+  flat(6);
+  mountain(1);
+  flat(1);
+  return result;
+};
+console.log(landscape());
+*/
+/*
+console.log("The future says:", future());
+
+function future() {
+  return "We STILL have no flying cars.";
+}
+*/
+/*
+function example() {
+  function a() {} // Okay
+  if (something) {
+    function b() {} // Danger!
+  }
+}
+*/
+/*
+function greet(who) {
+  console.log("Hello " + who);
+}
+greet("Harry");
+console.log("Bye");
+*/
+/*
+function chicken() {
+  return egg();
+}
+function egg() {
+  return chicken();
+}
+console.log(chicken() + " came first.");
+*/
+/*
+alert("Hello", "Good Evening", "How do you do?");// here it showing only first one.
+*/
+/*
+//power of given number 
+function power(base, exponent) {
+  if (exponent == undefined)
+    exponent = 2;
+  var result = 1;
+  for (var count = 0; count < exponent; count++)
+    result *= base;
+  return result;
+}
+console.log(power(5,20));
+*/
+//closure
+/*function wrapValue(n) {
+  var localVariable = n;
+  return function() { 
+    return localVariable; 
+  };
+}
+
+var wrap1 = wrapValue(1);
+var wrap2 = wrapValue(2);
+console.log(wrap1());
+console.log(wrap2());
+*/
+
+/*
+var p="premkumar";
+var k=p.length;
+
+console.log(k);
+*/
+/*
+var doh = "Doh";
+console.log(doh.toUpperCase());
+
+*/
+ /*
+ var p =[];
+ p.push("prem",10,11,"kumar","efewfwf");
+
+ console.log(p);
+
+ console.log(p.join(""));
+
+ console.log(p.pop(""));
+
+ console.log(p);
+*/
+
+/*var day1 = {
+  squirrel: false,
+  events: ["work", "touched tree", "pizza", "running",
+           "television"]
+};
+console.log(day1.events[1],day1.events[3]);
+*/
+/*
+var descriptions = {
+  work: "Went to work",
+  "touched tree": "Touched a tree"
+};
+console.log(descriptions.work[]);
+*/
+/*
+var anObject = {left: "prem", right: 2};
+console.log(anObject.left);
+// → 1
+delete anObject.right;
+console.log(anObject.left);
+console.log(anObject.right);
+// → undefined
+console.log("left" in anObject);
+// → false
+console.log("right" in anObject);
+// → true
+*/
+
+/*
+var object1 = {value: 10};
+var object2 = {value: 10};
+var object3 = object2;
+var object1 = object3;
+console.log(object1 == object2);
+
+console.log(object2 == object3);
+
+*/
+
+/*
+var journal = [];
+
+function addEntry(events, didITurnIntoASquirrel) {
+  journal.push({
+    events: "events",
+    squirrel: didITurnIntoASquirrel
+  });
+}
+journal.push("prem");
+console.log(journal);
+console.log(journal.events);
+*/
+
+/*
+function phi(table) {
+  k=(table[3] * table[0] - table[2] * table[1])
+  console.log(k[1]);
+  j=Math.sqrt((table[2] + table[3]) *
+              (table[0] + table[1]) *
+              (table[1] + table[3]) *
+              (table[0] + table[2]));
+  console.log(j);
+  return k/j;
+}
+
+console.log(phi([76, 9, 4, 1]));
+
+*/
+/*
+function hasEvent(event, entry) {
+  return entry.events.indexOf(event) != -1;
+}
+
+function tableFor(event, journal) {
+  var table = [0, 0, 0, 0];
+  for (var i = 0; i < journal.length; i++) 
+  {
+    var entry = journal[i], index = 0;
+    if (hasEvent(event, entry)) index += 1;
+    if (entry.squirrel) index += 2;
+    table[index] += 1;
+  }
+  return table;
+}
+
+console.log(tableFor("pizza", JOURNAL));
+*/
+
+//this code for printing the hole site
+/*
+function print_current_page()
+{
+window.print();
+}
+*/
+var today = new Date();  
+var day = today.getDay();  
+var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];  
+console.log("Today is : " + daylist[day] + ".");  
+var hour = today.getHours();  
+var minute = today.getMinutes();  
+var second = today.getSeconds();  
+var prepand = (hour >= 12)? " PM ":" AM ";  
+hour = (hour >= 12)? hour - 12: hour;  
+console.log(hour);
+if (hour===0 && prepand===' PM ')   
+{   
+  if (minute===0 && second===0)  
+  {   
+    hour=12;  
+    prepand=' Noon';  
+  }   
+  else  
+  {   
+   hour=12;  
+   prepand=' PM';  
+  }   
+}   
+if (hour===0 && prepand===' AM ')   
+{   
+if (minute===0 && second===0)  
+{   
+hour=12;  
+prepand=' Midnight';  
+}   
+else  
+{   
+hour=12;  
+prepand=' AM';  
+}   
+}   
+console.log("Current Time : "+hour + prepand + " : " + minute + " : " + second);
+</script>
+</body>
+</html>

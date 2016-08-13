@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>slide demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <style>
+  #toggle {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+  }
+  </style>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
+<body>
+ 
+<p>Click anywhere to toggle the box.</p>
+<div id="toggle"></div>
+ 
+<script>
+$( document ).click(function() {
+  $( "#toggle" ).toggle( "slide" );
+});
+</script>
+ 
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery slideLeft and slideRight Effect</title>
+<style type="text/css">
+    .box{
+        float:left;
+        overflow: hidden;
+        background: #f0e68c;
+    }
+    /* Add padding and border to inner content
+    for better animation effect */
+    .box-inner{
+        width: 400px;
+        padding: 10px;
+        border: 1px solid #a29415;
+    }
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var boxWidth = $(".box").width();
+        $(".slide-left").click(function(){
+            $(".box").animate({
+                width: 0
+            });
+        });
+        $(".slide-right").click(function(){
+            $(".box").animate({
+                width: boxWidth
+            });
+        });
+    });
+</script>
+</head>
+<body>
+    <button type="button" class="slide-left">Slide Left</button>
+    <button type="button" class="slide-right">Slide Right</button>
+    <hr>
+    <div class="box">
+        <div class="box-inner">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor. Integer faucibus ligula.</div>
+    </div>
+</body>
+</html>                         

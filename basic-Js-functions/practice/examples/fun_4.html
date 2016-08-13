@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="name" id="num">
+	<button onclick="sub()">button</button>
+	<script type="text/javascript">
+	function but(){
+		var k = document.getElementById('num').value;
+		var l = k.split("").sort().join("");
+		return l;
+	}
+
+	function sub(){
+		var m= but();
+		console.log(m);
+	}
+	
+	/*function alphabet_order(str)  
+	  {  
+		return str.split("").sort().join("");  
+	  }  
+	console.log(alphabet_order("webmaster"));  */
+	</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+$height=1024px;
+
+ul
+	height: $height
+	li
+		word-spacing: 20
+
+

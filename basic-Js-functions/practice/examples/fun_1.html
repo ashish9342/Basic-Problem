@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>reverse a number</title>
+</head>
+<body>
+	<!--<label>Enter a number(above 1 )</label>
+	<input type="text" name="number" id="num">
+	<button onclick="sub">submit</button> -->
+	<!-- <p id="demo"></p> -->
+	<script type="text/javascript">
+		//first method 
+/*
+		var n =1234;
+		var k = 0;
+		
+		while(n>0){
+			k *= 10;
+			k = k+ n%10;
+			n= parseInt(n/10);
+			
+		}
+		alert(k);
+		*/
+		//second method 
+		function reverse_a_number(n)  		
+		{  
+		    n = n + "";  
+		    var v = n.split("").reverse().join(""); 
+		    return v; 
+		}  
+		console.log(reverse_a_number(32243));
+		//third mrthod 
+		/*var number = 12354987,
+	    output = [],
+	    sNumber = number.toString();
+	    console.log(sNumber);
+	for (var i = 0;i < sNumber.length; i++) {
+	    output.push(+sNumber.charAt(i));
+	}
+
+	console.log(output);*/
+	</script>
+</body>
+</html>

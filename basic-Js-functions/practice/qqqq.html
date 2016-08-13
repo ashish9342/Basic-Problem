@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>qqqqqqqqqqqq</title>
+	<style type="text/css">
+		#demo [word="is"]{
+	   color:blue;
+	}
+	
+	</style>
+</head>
+<body>
+	
+	<p id="demo">sharepoisnt 2010 is good. sharepoint 2010 is nice. sharepoint 2010 is better then sharepoint 2010.sharepoint 2010 sharepoint 2010 is good. sharepoisnt 2010 is nice. sharepoint 2010 is better then sharepoint 2010.sharepoint 2010sharepoint 2010 is good. sharepoint 2010 is nice. sharepoint 2010 is better then sharepoint 2010.sharepoint 2010</p>
+	<script type="text/javascript">
+		function makeHighlightable(){
+  var n, a=[], walk=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null,false);
+  while(n=walk.nextNode()) a.push(n);
+    for(var i=0;i<a.length;i++){
+      var newSpan=document.createElement("span")
+      var words=a[i].nodeValue.replace(/[\r\n]/g,"").split(' ');
+        for(var j=0;j<words.length;j++){
+            var escapedWord=words[j].replace(/[^a-zA-Z0-9-']/g,'').toLowerCase()
+            words[j]='<span word="'+escapedWord+'">'+words[j]+'</span>'
+        }
+        words=words.join(" ")
+        newSpan.innerHTML=words
+        a[i].parentNode.replaceChild(newSpan,a[i])
+    }
+}
+
+makeHighlightable()
+	</script>
+</body>
+</html>

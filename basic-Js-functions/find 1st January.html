@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> find 1st January</title>
+</head>
+<body>
+	<script type="text/javascript">
+console.log('--------------------');
+for (var year = 2014; year <= 2050; year++)
+    {
+    	// (year) --> 2014 to 2050
+    	// 0 ---> sunday
+    	// 1 --> date
+    var d = new Date(year, 0, 1);
+    if ( d.getDay() === 0 )
+        console.log("1st January is being a Sunday  "+year);
+    }
+console.log('--------------------');
+	</script>
+</body>
+</html>

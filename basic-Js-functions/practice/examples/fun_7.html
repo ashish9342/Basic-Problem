@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>finding a vowles</title>
+</head>
+<body>
+	<input type="text" name="name" id="num"><br>
+	<button onclick="obj.init()">button</button>
+	<p id="demo"></p>
+	<p id="demo1"></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		//first method 
+
+		/*function vow(){
+			var str = document.getElementById('num').value,
+				count = 0;
+			for(var i =0; i<=str.length; i++){
+				if(str.charAt(i).match(/[a-zA-Z]/)!= null){
+					if(str.charAt(i).match(/[aeiouAEIOU]/)){
+						count+=1;
+					}
+				}
+			}
+			document.getElementById("demo").innerHTML = count;
+
+		} */
+
+		//second method 
+		
+
+		// function vow ends
+var obj ={
+	variable:{
+		count:0
+	},
+	BindClick: function(){
+
+    
+                var str = document.getElementById('num').value.toLowerCase(),
+                a=obj.variable.count;
+                console.log(a);
+                console.log(str);
+                for(var i =0; i<=str.length; i++){
+                    if(str.charAt(i).match(/[a-z]/)){
+                        if(str.charAt(i).match(/[aeiou]/)){
+                            a+=1;
+                        }
+                    }
+                }
+                document.getElementById("demo").innerHTML = a;
+
+            
+
+	},
+	init:function(){
+		obj.BindClick();
+        
+	}
+}
+
+$(document).ready(function(){
+	
+});
+
+	</script>
+
+</body>
+</html>

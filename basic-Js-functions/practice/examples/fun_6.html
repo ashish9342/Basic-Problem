@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="name" id="num">
+	<button onclick="run()">button</button>
+	<script type="text/javascript">
+		function sub(){
+			var array = document.getElementById('num').value;
+			var k = array.split(" ");
+			var m = k[0];
+			for(var i = 1; i< k.length; i++){
+				
+				if(m.length<k[i].length){
+					m = k[i];
+				}
+			}
+			return m;
+		}
+		function run(){
+			var p = sub();
+			console.log(p);
+
+		}
+	</script>
+</body>
+</html>

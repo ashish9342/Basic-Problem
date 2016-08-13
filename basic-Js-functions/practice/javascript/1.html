@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+	<title>gsap</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+	<style type="text/css">
+		body{
+	    background-color:#000;
+	 font-size:16px;
+	}
+#demo {
+    width: 750px;
+    height: 60px;
+    background-color: #333;
+    padding: 8px;
+  margin-bottom:10px;
+}
+#logo {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/logo_black_1.jpg) no-repeat;
+}
+
+input[type="button"]{
+  -webkit-appearance: button;
+  padding:8px;
+  margin-right:5px;
+  margin-bottom:25px;
+  height: 50px;
+}
+	</style>
+</head>
+	<div id="demo">
+    	<div id="logo"></div>
+	</div>
+	<input type="button" id="playBtn" value="play()">
+	<!--<input type="button" id="pauseBtn" value="pause()">
+	<input type="button" id="resumeBtn" value="resume()">
+	<input type="button" id="reverseBtn" value="reverse()">
+	<input type="button" id="playFromBtn" value="play(5)">
+	<input type="button" id="reverseFromBtn" value="reverse(1)">
+	<input type="button" id="seekBtn" value="seek(3)"><br/>
+	<input type="button" id="timeScaleSlowBtn" value="timeScale(0.5)">
+	<input type="button" id="timeScaleNormalBtn" value="timeScale(1)">
+	<input type="button" id="timeScaleFastBtn" value="timeScale(2)">
+	<input type="button" id="restartBtn" value="restart()">-->
+	<script type="text/javascript">
+		/*external js
+http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js
+http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js
+*/
+
+window.onload = function() {
+  var logo = document.getElementById("logo"),
+            playBtn = document.getElementById("playBtn"),
+           /* pauseBtn = document.getElementById("pauseBtn"),
+            resumeBtn = document.getElementById("resumeBtn"),
+            reverseBtn = document.getElementById("reverseBtn"),
+            playFromBtn = document.getElementById("playFromBtn"),
+            reverseFromBtn = document.getElementById("reverseFromBtn"),
+            seekBtn = document.getElementById("seekBtn"),
+            timeScaleSlowBtn = document.getElementById("timeScaleSlowBtn"),
+            timeScaleNormalBtn = document.getElementById("timeScaleNormalBtn"),
+            timeScaleFastBtn = document.getElementById("timeScaleFastBtn"),
+        restartBtn = document.getElementById("restartBtn"),*/
+            tween = TweenLite.to(logo, 6, {left:"750px", ease:Linear.easeNone});
+        
+  playBtn.onclick = function() {
+        //Play the tween forward from the current position.
+        //If tween is complete, play() will have no effect
+    tween.play();
+      }
+      /*
+      pauseBtn.onclick = function() {
+          tween.pause();
+      }
+      resumeBtn.onclick = function() {
+          //Resume playback in current direction.
+          tween.resume();
+      }
+      reverseBtn.onclick = function() {
+          tween.reverse();
+      }
+      playFromBtn.onclick = function() {
+          //Play from a sepcified time (in seconds).
+          tween.play(5);
+      }
+      reverseFromBtn.onclick = function() {
+          //Reverse from a specified time (in seconds).
+          tween.reverse(1);
+      }
+      seekBtn.onclick = function() {
+          //Jump to specificied time (in seconds) without affecting
+          //whether or not the tween is paused or reversed.
+          tween.seek(3);
+      }
+      timeScaleSlowBtn.onclick = function() {
+        //timescale of 0.5 will make the tween play at half-speed (slower).
+          //Tween will take 12 seconds to complete (normal duration is 6 seconds).
+          tween.timeScale(0.5);
+      }
+      timeScaleNormalBtn.onclick = function() {
+          //timescale of 1 will make tween play at normal speed.
+          tween.timeScale(1);
+      }
+      timeScaleFastBtn.onclick = function() {
+          //timescale of 1 will make the tween play at double-speed (faster).
+          //Tween will take 3 seconds to complete (normal duration is 6 seconds).
+          tween.timeScale(2);
+      }
+      restartBtn.onclick = function() {
+          //Start playing from a progress of 0.
+          tween.restart();
+      }*/
+}
+	</script>
+</body>
+</html>

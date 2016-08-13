@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery</title>
+	<script src="plugin/jquery-1.11.2.min.js"></script>
+	
+</head>
+<body>
+	<div id="slideMe">
+	    This content will appear and disappear when the div is slid in and out.This content will appear and disappear when the div is slid in and out.
+	</div>
+	<!-- One button for each slide command -->
+	<input type="button" id="btnSlideUp" value="Slide Up">
+	<input type="button" id="btnSlideDown" value="Slide Down">
+	<input type="button" id="btnSlideToggle" value="Slide Toggle">
+
+
+
+	<div id="customAccordion">
+    <!-- First accordion menu item-->
+    <h3>Custom Feature #1</h3>
+    <div>
+        <p>
+           Allow collapsible menus - including the active one.
+        </p>
+    </div>
+
+	<!-- Second accordion menu item-->
+    <h3>Custom Feature #2</h3>
+    <div>
+    	<p>
+            Sets active panel to false, making the menu start out with all menu items closed.
+        </p>
+    </div>
+
+    <!-- Third accordion menu item-->
+    <h3>Custom Feature #3</h3>
+    <div>
+    	<p>
+            Make each inside panel only as tall as it's content requires.
+        </p>
+    </div>
+</div>
+          
+<script>
+	$('#btnSlideUp').click(function() {
+	    $('#slideMe').slideUp('3000');
+	});
+	$('#btnSlideDown').click(function() {
+	    $('#slideMe').slideDown('2000');
+	});
+	$('#btnSlideToggle').click(function() {
+	    $('#slideMe').slideToggle('5000');
+	});
+
+
+</script>
+</body>
+</html>
+
+
+
+

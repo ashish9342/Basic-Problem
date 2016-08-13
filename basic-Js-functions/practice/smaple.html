@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<style type="text/css">
+	*{
+		padding:0px;
+		margin: 0px;
+		list-style-type: none;
+	}
+	.hole{
+		width: 1200px;
+		height: 900px;
+		background-color: #000;
+		margin: auto;
+		margin-top: 30px;
+	}
+	.header{
+		width: 1200px;
+		height: 100px;
+		background-color:red;
+	}
+	.head1 li{
+		padding-top: 15px;
+		padding-left: 15px;
+		float: left;
+	}
+	.laside{
+		width: 150px;
+		height: 800px;
+		/*background-color: #aadded;*/
+		float: left;
+
+	}
+	.laside a{
+		color: white;
+	}
+	.raside{
+		width: 600px;
+		height: 800px;
+		background-color:blue;
+		float: left;
+		display: block;
+		color: white;
+	}
+	.raside h1{
+		cursor: pointer;
+	}
+	.raside1{
+		width: 600px;
+		height: 800px;
+		background-color:#aeefdd;
+		float: left;
+		display: none;
+	}
+	.raside2{
+		width: 600px;
+		height: 800px;
+		background-color:yellow;
+		float: left;
+		display: none;
+	}
+	.raside3{
+		width: 600px;
+		height: 800px;
+		background-color:green;
+		float: left;
+		display: none;
+	}
+	.lis li{
+		list-style-type: none;
+		padding-top: 30px;
+		padding-left: 20px;
+	}
+	.pop{
+		width: 300px;
+		height: 500px;
+		background-color: orange;
+		position: absolute;
+		left:1200px;
+		top: 430px;
+		z-index: 1;
+	}
+
+	</style>
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</head>
+<body>
+	<div class="hole">
+		<div class="header">
+			<div class="head1">
+				<ul>
+					<li><i class="fa fa-align-justify"></i></li>
+					<li><h3>Prem hangouts</h3></li>
+				</ul>
+				
+			</div>
+			<div>
+				
+			</div>	
+		</div>
+		<div class="laside">
+			<ul class="lis">
+				<li id="li1"><a href="#"><i class="fa fa-users fa-2x"></i></a></li>
+				<li id="li2"><a href="#"><i class="fa fa-envelope fa-2x"></i></a></li>
+				<li id="li3"><a href="#"><i class="fa fa-ellipsis-h fa-2x"></i></a></li>
+				<!-- <li id="li3"><a href="#"><i class="fa fa-ellipsis fa-2x"></a></li> -->
+			</ul>
+		</div>
+
+		<div class="raside">
+			<h1>prem kumar</h1>
+			<h1>Kiran kumar</h1>
+			<h1>vinay kumar</h1>
+			<h1>raju kumar</h1>
+
+		</div>
+		<div class="pop">
+			
+
+		</div>
+		<div class="raside1">
+			
+		</div>
+		<div class="raside2">
+			
+		</div>
+
+		<div class="raside3">
+			
+		</div>
+
+
+
+	</div>
+	<script>
+		$(document).ready(function(){
+		    $("#li1").click(function(){
+
+		    	$(".raside").show();
+		        $(".raside1").hide();
+		        $(".raside2").hide();
+		        $(".raside3").hide();
+		    });
+
+		    $("#li2").click(function(){
+
+		    	$(".raside").hide();
+		        $(".raside1").show();
+		        $(".raside2").hide();
+		        $(".raside3").hide();
+		       
+		    });
+
+			$("#li3").click(function(){
+
+		    	$(".raside").hide();
+		        $(".raside1").hide();
+		        $(".raside2").show();
+		        $(".raside3").hide();
+		    });
+		    $("#li4").click(function(){
+
+		    	$(".raside").hide();
+		    	$(".raside1").hide();
+		        $(".raside2").hide();
+		        $(".raside3").show();
+		    });
+
+		});
+
+	</script>
+</body>
+</html>

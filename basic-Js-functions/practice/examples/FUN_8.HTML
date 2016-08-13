@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prime or not</title>
+</head>
+<body>
+	<form>
+		<input type="text" name="name" id="n1">
+		<button onclick="test()">Submit</button>
+	</form>						
+	<script type="text/javascript">
+		/*function test(){
+			var k = document.getElementById('n1').value;
+			for(i = 1; i<=k; i++){
+				if(k%i==0){
+					alert("it's not a prime");
+				}
+				else{
+					alert("it's a prime number");
+				}
+			}
+			
+		}*/
+		/*
+		for (var counter = 1; counter <= 100; counter++) 
+		{
+		    var not_prime = false;
+		    for (var div = 2; div <= (counter - 1); div++)    
+		    {
+		        if (counter % div === 0){
+		        	not_prime = true;
+		        }
+		    }
+		    if (not_prime === false) {
+		    	console.log(counter);
+		    }
+		}
+		*/
+		/*
+		function test() {
+			var value = document.getElementById('n1').value;
+		    for(var i = 2; i < value; i++) {
+		        if(value % i === 0) {
+		            return false;
+		        }
+		    }
+		    return value > 1;
+		}*/
+
+		var k = 13;
+			if(k>1){
+				for(i = 2; i<=k; i++){
+					if(k%i==0){
+						
+						break;
+					}
+					else{
+						
+						alert("it's is a prime");
+					}
+				}
+
+				}
+			else{
+				
+				alert("it's not a prime");
+			}
+	</script>
+</body>
+</html>
